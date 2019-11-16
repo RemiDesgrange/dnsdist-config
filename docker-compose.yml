@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  dnsdist:
+    build: .
+    ports:
+      - "8053:8053"
+  unbound:
+    image: mvance/unbound:latest
+
