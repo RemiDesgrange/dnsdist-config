@@ -4,6 +4,7 @@ services:
     build: .
     ports:
       - "8053:8053"
+    tty: true
   unbound:
     image: mvance/unbound:latest
 
