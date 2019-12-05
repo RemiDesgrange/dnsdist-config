@@ -5,6 +5,17 @@ services:
     ports:
       - "8053:8053"
     tty: true
+    networks:
+      dnsnet:
   unbound:
     image: mvance/unbound:latest
+    networks:
+      dnsnet:
+        ipv4_address: 10.152.118.100
 
+networks:
+  dnsnet:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.152.118.0/24
