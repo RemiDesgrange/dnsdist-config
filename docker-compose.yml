@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "8053:8053"
+      - "53:53/udp"
+      - "53:53/tcp"
     tty: true
     networks:
       dnsnet:
